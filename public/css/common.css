@@ -39,7 +39,7 @@ main {
     justify-content: center;
     align-items: center;
     position: sticky;
-    z-index: 100;
+    z-index: 101;
     top: 0;
 }
 .header-sec::after {
