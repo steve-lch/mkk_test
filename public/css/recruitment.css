@@ -1,0 +1,318 @@
+@charset "UTF-8";
+/* 總部 */
+.hq-hire-sec {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/headquarter_hire_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: relative;
+}
+.hq-hire-sec::before {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.85;
+}
+.hq-hire-cnt {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    min-height: 650px;
+}
+.hire-announce {
+    font-family: 'Noto Serif TC';
+    font-size: 96px;
+    font-weight: 700;
+    color: #2C579B;
+    margin: 0 0 55px 0;
+}
+.hq-hire-title {
+    font-family: 'Noto Serif TC';
+    font-size: 36px;
+    font-weight: 700;
+    color: #2C579B;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    letter-spacing: 8px;
+    margin: 0 0 36px 0;
+}
+.hq-hire-title::before,
+.hq-hire-title::after {
+    display: block;
+    content: '';
+    width: 1px;
+    height: 100%;
+    background-color: #2C579B;
+}
+.hq-hire-title::before {
+    margin: 0 8px 0 0;
+}
+.hq-hire-parag {
+    text-align: center;
+    font-size: 18px;
+    line-height: 36px;
+    color: #585858;
+    opacity: 0.8;
+    margin: 0 0 60px 0;
+}
+.hq-hire-btn-set {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hq-hire-btn-set > img {
+    display: block;
+    position: relative;
+    z-index: 1;
+    transform: translateY(10px);
+}
+.hq-hire-btn {
+    display: flex;
+    padding: 9px 32px;
+    background-color: #132C53;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 22px;
+    box-shadow: 2px 2px 0 #9C9C9C;
+    position: relative;
+    z-index: 2;
+}
+
+/* 各店 */
+.store-hr-wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.store-hire-info {
+    display: flex;
+    flex-direction: column;
+    padding: 23px 20px 2px 20px;
+    border: 1px solid #2C579B;
+    position: relative;
+    width: calc((100% - 60px) / 3);
+    margin: 0 30px 42px 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
+    transition: 0.3s;
+}
+.store-hire-info:hover {
+    background-color: #2C579B;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.store-hire-info:nth-of-type(3n) {
+    margin: 0 0 42px 0;
+}
+.store-hire-info.preparing,
+.store-hire-info.preparing:hover {
+    border: 1px dashed #9C9C9C;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0,0,0,0);
+}
+
+.store-hire-name {
+    font-size: 24px;
+    color: #2C579B;
+    display: flex;
+    align-items: center;
+    margin: 0 0 15px 0;
+    transition: 0.3s;
+    transition-delay: 0.1s;
+}
+.store-hire-name::before {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #2C579B;
+    font-family: 'Font Awesome 6 Pro';
+    content: '\f54e';
+    color: #fff;
+    font-size: 16px;
+    border-radius: 50%;
+    margin: 0 4px 0 0;
+    transition: 0.3s;
+}
+.store-hire-info:hover .store-hire-name {
+    color: #9AAFCF;
+}
+.store-hire-info:hover .store-hire-name::before {
+    background-color: #9AAFCF;
+}
+.store-hire-info.preparing .store-hire-name::after {
+    display: block;
+    content: '(籌備中)';
+}
+.store-hire-info.preparing .store-hire-name,
+.store-hire-info.preparing:hover .store-hire-name {
+    color: #9C9C9C;
+}
+.store-hire-info.preparing .store-hire-name::before,
+.store-hire-info.preparing:hover .store-hire-name::before {
+    background-color: #9C9C9C;
+}
+.store-hire-info:hover .store-contact-list > li {
+    color: #fff;
+}
+.store-hire-info:hover .store-contact-list > li > span::before {
+    background-color: #fff;
+}
+.store-hire-info.preparing:hover .store-contact-list > li {
+    color: #585858;
+}
+.store-hire-info.preparing:hover .store-contact-list > li > span::before {
+    background-color: #585858;
+}
+.job-type {
+    display: flex;
+    font-style: normal;
+    color: #B92929;
+    transition: 0.3s;
+    transition-delay: 0.2s;
+}
+.job-type::after {
+    display: block;
+    content: '、';
+    color: #585858;
+    transition: 0.3s;
+}
+.store-hire-info:hover .job-type {
+    color: #FFCC66;
+}
+.store-hire-info:hover .job-type::after {
+    color: #FFCC66;
+}
+.job-type:nth-last-of-type(1)::after {
+    display: none;
+}
+.store-hire-info.preparing .store-hire-btn-set {
+    display: none;
+}
+.store-hire-btn-set {
+    display: flex;
+    justify-content: flex-end;
+    transform: translateY(calc(50% + 2px));
+}
+.store-hire-btn {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2C579B;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 0 7px;
+    transition: 0.3s;
+}
+.store-hire-info:hover .store-hire-btn {
+    background-color: #9AAFCF;
+}
+.store-hire-btn:nth-of-type(1) {
+    margin: 0 10px 0 0;
+}
+.store-hire-btn::before {
+    display: flex;
+    justify-content: center;
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 900;
+    color: #fff;
+    width: 16px;
+}
+.store-hire-btn.phone::before {
+    content: '\f095';
+}
+.store-hire-btn.map::before {
+    content: '\f3c5';
+}
+.store-hire-btn > span {
+    color: #fff;
+    max-width: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: 0.3s;
+}
+.store-hire-info:hover .store-hire-btn > span {
+    opacity: 1;
+    max-width: 200px;
+    overflow: initial;
+    margin: 0 0 0 6px;
+    -webkit-animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: scale-in-hor-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+/* Responsive */
+@media (max-width: 1219.98px) {}
+@media (max-width: 1019.98px) {}
+@media (max-width: 991.98px) {
+    .store-hire-info {
+        width: calc((100% - 30px) / 2);
+    }
+    .store-hire-info:nth-of-type(2n) {
+        margin: 0 0 42px 0;
+    }
+    .store-hire-info:nth-of-type(3n) {
+        margin: 0 30px 42px 0;
+    }
+    .store-hire-info:nth-of-type(6n) {
+        margin: 0 0 42px 0;
+    }
+}
+@media (max-width: 775.98px) {}
+@media (max-width: 697.98px) {
+    .store-hire-info {
+        width: 100%;
+        margin: 0 0 42px 0;
+    }
+    .store-hire-info:nth-of-type(3n) {
+        margin: 0 0 42px 0;
+    }
+    .store-hire-btn > span {
+        opacity: 1;
+        max-width: 200px;
+        overflow: initial;
+        margin: 0 0 0 6px;
+    }
+}
+@media (max-width: 539.98px) {
+    .hire-announce {
+        font-size: 48px;
+    }
+    .hq-hire-title {
+        font-size: 20px;
+        letter-spacing: 4px;
+    }
+    .hq-hire-parag {
+        font-size: 16px;
+    }
+    .store-hire-btn {
+        font-size: 16px;
+    }
+}
+@media (max-width: 421.98px) {
+    .store-hire-name {
+        font-size: 18px;
+    }
+    .store-contact-list > li {
+        font-size: 14px;
+    }
+}
+@media (max-width: 351.98px) {
+    .store-hire-btn {
+        font-size: 14px;
+    }
+}
+@media (max-width: 279.98px) {}

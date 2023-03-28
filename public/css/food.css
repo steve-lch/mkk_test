@@ -1,0 +1,352 @@
+@charset "UTF-8";
+/* 吃麵三式 */
+.how-taste-sec {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+.how-taste-cnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    position: relative;
+}
+.how-taste-steps {
+    margin: 0 0 60px 0;
+}
+
+.ht-step-ico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 12px !important;
+    height: 12px;
+    margin: 0 16px;
+    background-color: #DEDEDE;
+    opacity: 0.5;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ht-step-ico.swiper-slide-thumb-active {
+    background-color: #2C579B;
+}
+.ht-step-ico::before {
+    display: block;
+    content: '';
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
+    position: absolute;
+    z-index: -1;
+    border: 1px solid #2C579B;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.3s;
+}
+.ht-step-ico.swiper-slide-thumb-active::before {
+    opacity: 1;
+}
+.ht-step-ico::after {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 1px;
+    background-color: #2C579B;
+    position: absolute;
+    left: calc(100% + 6px);
+}
+
+.ht-step-ico:nth-last-child(1)::after {
+    display: none;
+}
+.how-taste-showing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100% !important;
+    position: relative;
+}
+.how-taste-showing-msg {
+    font-size: 24px;
+    color: #2C579B;
+    opacity: 0;
+}
+.how-taste-showing.swiper-slide-active .how-taste-showing-msg {
+    -webkit-animation: rotate-in-2-ccw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: rotate-in-2-ccw 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.how-taste-showing > img {
+    display: block;
+    width: 50%;
+    transform: translateY(24%);
+}
+
+/* 各餐點slider */
+.meal-show-sec {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.meal-show-sec::after {
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: url(../img/light_gray_concrete_wall.jpg) repeat 50% 50%;
+    background-size: cover;
+    opacity: 0.3;
+    position: absolute;
+    z-index: -1;
+}
+.meal-show-cnt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 40px 0;
+    position: relative;
+    overflow: hidden;
+}
+.meal-show-cnt::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #DEDEDE;
+    box-shadow: 0 1px 0 rgba(255,255,255,1);
+    position: absolute;
+    bottom: 1px;
+}
+.meal-show-sec:nth-of-type(5) > .meal-show-cnt::after {
+    display: none;
+}
+.meal-show-title {
+    font-family: 'Noto Serif TC';
+    font-size: 96px;
+    color: #132C53;
+    opacity: 0.15;
+}
+
+/* 完整菜單 */
+.full-menu-sec {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.full-menu-decoration {
+    position: absolute;
+
+}
+.full-menu-cnt {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 40px 0;
+    z-index: 2;
+}
+.menu-series-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu-series {
+    padding: 35px 20px 21px 20px;
+    border: 1px solid #2C579B;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(8px);
+    width: calc(50% - 15px);
+    margin: 0 0 30px 0;
+}
+.menu-series.full {
+    width: 100%;
+}
+.menu-series-title {
+    font-family: 'Noto Serif TC';
+    font-size: 24px;
+    color: #2C579B;
+    padding: 0 10px;
+    font-weight: 700;
+    margin: 0 auto;
+}
+.menu-item-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.menu-item {
+    list-style: none;
+    font-size: 20px;
+    color: #585858;
+    display: flex;
+    width: calc(50% - 35px);
+    padding: 0 40px 0 0;
+    position: relative;
+    margin: 0 0 14px 0;
+}
+.menu-item-list.full .menu-item {
+    width: 100%;
+}
+.menu-item-note {
+    font-size: 14px;
+    color: #fff;
+    background-color: #B92929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 2px 6px;
+    margin: 0 0 0 6px;
+}
+.menu-item .price {
+    white-space: nowrap;
+    position: absolute;
+    right: 0;
+}
+.full-menu-parallax-effect {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.full-menu-decoration {
+    position: absolute;
+    z-index: 1;
+    width: 34%;
+    padding-bottom: 34%;
+    opacity: 0.55;
+}
+.full-menu-decoration.first {
+    top: 10% !important;
+    right: unset !important;
+    bottom: unset !important;
+    left: -5% !important;
+}
+.full-menu-decoration.second {
+    top: 40% !important;
+    right: -5% !important;
+    bottom: unset !important;
+    left: unset !important;
+}
+.full-menu-decoration > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Day Day Eat */
+.dde-comic-wrap {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.dde-comic {
+    width: 12.33%;
+    padding-bottom: 10.33%;
+    position: relative;
+    margin: 0 19px;
+    opacity: 0.6;
+}
+.dde-comic > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+}
+
+/* Responsive */
+@media (max-width: 1219.98px) {}
+@media (max-width: 1019.98px) {}
+@media (max-width: 991.98px) {
+    .menu-item {
+        font-size: 16px;
+    }
+}
+@media (max-width: 775.98px) {}
+@media (max-width: 697.98px) {
+    .meal-show-cnt {
+        width: 100% !important;
+    }
+    .meal-show-cnt .swiper-button-prev,
+    .meal-show-cnt .swiper-button-next {
+        display: none;
+    }
+    .menu-item {
+        width: 100%;
+    }
+    .menu-series {
+        width: 100%;
+    }
+    .full-menu-decoration {
+        width: 70%;
+    }
+    .dde-comic-wrap {
+        flex-wrap: wrap;
+    }
+    .dde-comic {
+        width: 32%;
+        padding-bottom: 30%;
+        display: flex;
+        justify-content: center;
+        margin: 0 8px;
+    }
+    .dde-comic > img {
+        width: 80%;
+    }
+    .dde-comic:nth-child(3),
+    .dde-comic:nth-child(4),
+    .dde-comic:nth-child(5) {
+        margin: 0;
+    }
+}
+@media (max-width: 539.98px) {
+    .meal-show-cnt {
+        width: calc(100% - 40px) !important;
+    }
+    .meal-show-title {
+        font-size: 60px;
+    }
+    
+}
+@media (max-width: 421.98px) {}
+@media (max-width: 351.98px) {}
+@media (max-width: 279.98px) {
+    .meal-show-title {
+        font-size: 48px;
+    }
+}
+
+/* Animation */
+@-webkit-keyframes rotate-in-2-ccw {
+    0% {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+        opacity: 1;
+    }
+}
+@keyframes rotate-in-2-ccw {
+    0% {
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotate(0);
+                transform: rotate(0);
+        opacity: 1;
+    }
+}
+
+  

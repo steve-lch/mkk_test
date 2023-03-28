@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>麵匡匡拉麵食堂</title>
+    <link href="https://rawcdn.githack.com/hung1001/font-awesome-pro-v6/44659d9/css/all.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/lib/css/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="/public/css/common.css">
+</head>
+<body>
+    <!-- Loading Animation Start -->
+    <section class="loading-anima-sec">
+        <figure class="loading-anima-box">
+            <img class="loading-ramen" src="/public/img/loading_ramen.svg">
+            <img class="loading-chopstick" src="/public/img/loading_chopstick.svg">
+        </figure>
+        <span class="loading-anima-text">Loading<i></i><i></i><i></i></span>
+    </section>
+    <!-- Loading Animation End -->
+
+    <!-- Header Start -->
+    <header class="header-sec">
+        
+    </header>
+    <!-- Header End -->
+
+    <!-- Side Tools Start -->
+    <div class="side-tools">
+        
+    </div>
+    <!-- Side Tools End -->
+
+    <!-- Contact us Start -->
+    <section class="container-fluid contact-us-sec">
+      <div class="container contact-us-cnt">
+        <h3 class="sec-title">聯絡我們<span class="sec-title-deco">Contact us</span></h3>
+        <ul class="headquarter-contact-info">
+          <li><span>總部服務專線 / 加盟專線：</span>(02)2999-0133</li>
+          <li><span>總部服務時間：</span>週一至週五 10:00AM~19:00PM</li>
+          <li><span>客服信箱：</span>請填寫下方表格，我們將會盡快與您聯繫</li>
+        </ul>
+      </div>
+    </section>
+    <!-- Contact us End -->
+
+
+    <!-- 聯絡我們表單 Start -->
+    <section class="container-fluid seminar-attend-sec">
+      <div class="container seminar-attend-cnt">
+        <div class="seminar-form-wrapper">
+          <form  id="seminarForm" class="join_class_form">
+              <div class="join_class_form_content"> 
+                  <div class="join_class_form_full">
+                    <div class="join_class_form_item age_range">
+                        <label for="">意見類型</label>
+                        <div class="join_class_form_check">
+                            <div class="join_class_form_check_item">
+                                <div class="join_class_form_check_input"></div>
+                                <span>加盟諮詢</span>
+                            </div>
+                            <div class="join_class_form_check_item">
+                                <div class="join_class_form_check_input"></div>
+                                <span>意見反映</span>
+                            </div>
+                            <div class="join_class_form_check_item">
+                                <div class="join_class_form_check_input"></div>
+                                <span>其他(廠商合作/詢問)</span>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="join_class_form_full">
+                      <div class="join_class_form_item name">
+                          <label for="">姓名</label>
+                          <input name="name" type="text" >
+                      </div>
+                  </div>
+                  <div class="join_class_form_full">
+                      <div class="join_class_form_item phone">
+                          <label for="">聯絡電話</label>
+                          <input name="contact_number" type="number">
+                      </div>
+                  </div>
+                  <div class="join_class_form_full">
+                      <div class="join_class_form_item le">
+                          <label for="">Email</label>
+                          <input name="receive_detail" type="text" >
+                      </div>
+                  </div>
+                  <div class="join_class_form_full">
+                      <div class="join_class_form_item other">
+                          <label for="memo">其他意見</label>
+                          <textarea name="memo" id="memo" cols="30" rows="5"></textarea>
+                      </div>
+                  </div>
+              </div>
+              <button class="theme-btn" id="sendSeminarForm">送出</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- 聯絡我們表單 End -->
+
+    <!-- 總部地圖 Start -->
+    <section class="container-fluid headquarter-map-sec">
+      <iframe src="https://www.google.com/maps/embed/v1/place?q=新北市三重區重新路五段609巷10號6樓之1&amp;key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8" style="border: 0; width: 100%; height: 340px;"></iframe>
+    </section>
+    <!-- 總部地圖 End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-sec">
+        
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Mobile bottom Tools Start -->
+    <section class="container-fluid mobile-btm-tools-sec">
+        
+    </section>
+    <!-- Mobile bottom Tools End -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/lib/js/jquery/jquery.min.js"></script>
+    <script src="/lib/js/parallax/parallax.min.js"></script>
+    <script src="/lib/js/gsap3/gsap.min.js"></script>
+    <script src="/lib/js/swiper/swiper-bundle.min.js"></script> 
+    <script src="/public/js/common.js"></script>
+    <script>
+      $(function(){
+          // select
+          $(".select-common_active").click(function(){
+              $(this).parents(".select-common").find(".select-common_list").slideToggle(300);
+          })
+          $(".select-common_list li").click(function(){
+              let select = $(this).html();
+              $(this).parents(".select-common").find(".select-common_active span").html(select);
+              $(this).parents(".select-common").find(".select-common_list").slideUp(300);
+
+              // ellipsis
+              let len = 12; 
+              $(".selected-option").each(function(i){
+                  if($(this).text().length>len){
+                      $(this).attr("title",$(this).text());
+                      var text=$(this).text().substring(0,len-1)+"...";
+                      $(this).text(text);
+                  }
+              });
+          })
+          $(".recruit_select_list li").click(function(){
+              $(this).addClass("active").siblings("li").removeClass("active");
+          })
+          $(document).click(function (event) {
+              var selectArea = $(".select-common");
+              if (!selectArea.is(event.target) && selectArea.has(event.target).length === 0) {
+                  $(".select-common_list").slideUp(300);
+              }
+          });
+      });
+
+      $(function(){
+          // 取消form按鈕預設功能
+          $("form").on('submit',function(e){
+              e.preventDefault();
+          });
+          var selected_seminar_id = null;
+          
+
+          $.ajax({
+              url :'api/seminar',
+              type:'get',
+              dataType:'json',
+              data:{
+                  
+              },
+              success: function(seminars) {
+                  console.log(seminars);
+                  $('.seminar .join_class_form_select_list').empty();
+                  if(seminars.length<=0){
+                      selected_seminar_id = 'noHaveSeminar';
+                  }
+                  
+
+
+
+                  seminars.forEach(function(seminar) {
+                      var optionStr = '<span class="seminar_option" style="display: block;overflow: hidden;">'+seminar['title']+'</span><span class="seminar_option" style="display: block;overflow: hidden;">'+moment(seminar['started_at']).format('YYYY-MM-DD HH:mm')+'-'+moment(seminar['ended_at']).format('HH:mm')+'</span><span class="seminar_option" style="display: block;overflow: hidden;">'+seminar['address']+'</span><span class="seminar_option" style="display: block;overflow: hidden;">剩餘名額：'+seminar['qop']+'</span>';
+                      _dom = $('<li></li>');
+                      
+                      _dom.html(optionStr);
+                      _dom.on('click',function(){
+                          selected_seminar_id = seminar['id'];
+                          _dom.parents(".select-common").find(".select-common_active").css('height','80px');
+                          // _dom.parents(".select-common").find(".select-common_active span").css('marginTop','-55px');
+                          _dom.parents(".select-common").find(".select-common_active span").html(optionStr);
+                          _dom.parents(".select-common").find(".select-common_list").slideUp(300);
+                      });
+                      $('.seminar .join_class_form_select_list').append(_dom);
+                  });
+              }
+          });
+
+
+          $(".join_class_form_check_item").click(function(){
+              if($(this).hasClass("active")) {
+                  $(this).removeClass("active");
+              }else {
+                  $(this).addClass("active").siblings(".join_class_form_check_item").removeClass("active");
+              }
+          })
+          var swiper = new Swiper(".join_advantage_slider", {
+              slidesPerView: 2,
+              spaceBetween: 25,
+              shortSwipes:false,
+              longSwipesMs:100,
+              navigation: {
+                  nextEl: ".swiper-button-next",
+                  prevEl: ".swiper-button-prev",
+              },
+              breakpoints: {
+                  768: {
+                      slidesPerView: 4,
+                      spaceBetween: 36,
+                  },
+              },
+          })
+
+          $('#sendSeminarForm').on('click',function(){
+              
+              var form = $('#seminarForm');
+
+              var data = {
+                  name            : form.find('[name=name]').val(),
+                  gender	        : form.find('.gender .active').text().trim() || null,
+                  age_range	    : form.find('.age_range .active').text().trim() || null,
+                  phone_number    : form.find('[name=phone_number]').val(),
+                  contact_number  : form.find('[name=contact_number]').val(),
+                  receive_type	: form.find('.receive_type .select-common_active span').text() || null,
+                  receive_detail  : form.find('[name=receive_detail]').val(),
+                  amount	        : form.find('.amount .select-common_active span').text() || null,
+                  contact_time	: form.find('.contact_time .select-common_active span').text() || null,
+                  seminar_id      : selected_seminar_id,
+                  memo            : form.find('[name=memo]').val(),
+              };
+
+              for(var i in data){
+                  if(data[i]=='請選擇' || data[i]===""){
+                      data[i]=null;
+                  }
+              }
+
+              if(!data['name']){
+                  Swal.fire('請輸入姓名');
+                  return;
+              }
+              if(!data['receive_type']){
+                  Swal.fire('請選擇收件方式');
+                  return;
+              }
+              if(!data['receive_detail']){
+                  Swal.fire('請輸入收件資訊');
+                  return;
+              }
+              if(!data['amount']){
+                  Swal.fire('請選擇出席人數');
+                  return;
+              }
+              if(!data['contact_time']){
+                  Swal.fire('請選擇方便聯絡時間');
+                  return;
+              }
+
+              if(!data['phone_number'] && !data['contact_number']){
+
+                  Swal.fire('請輸入手機號碼或聯絡電話');
+                  return;
+              }
+
+              if(data['seminar_id'] == 'noHaveSeminar'){
+                  Swal.fire('目前尚無場次，敬請期待');
+                  return;
+              }else if(!data['seminar_id']){
+                  Swal.fire('請選擇場次');
+                  return;
+              }
+
+              console.log(data)            
+
+              Swal.fire({
+                  title: '報名中...',
+                  allowOutsideClick: false,
+                  didOpen: function()  {
+                      Swal.showLoading();
+                  }
+              });
+
+              $.ajax({
+                  url :'api/seminar/participant',
+                  type:'post',
+                  dataType:'json',
+                  data:data,
+                  success: function(seminars) {
+                      console.log(seminars);
+                      Swal.fire({
+                          title: '專人將盡快與您聯絡，確認是否成功報名!',
+                          icon: 'success',
+                      }).then(function(result) {
+                          location.reload();
+                      })
+                  }
+              });
+              
+          });
+
+      });
+
+
+    </script>
+</body>
+</html>
