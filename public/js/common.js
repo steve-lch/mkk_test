@@ -26,7 +26,7 @@ axios.all([requestHeader, requestFooter, requestSideTools, requestMobileBottom])
         repeatDelay: 3
     });
     chiShow.from("#chi-chi", {opacity: 0, y: 100, duration: 0.5, ease: "expo"})
-            .from("#chi-chi-say", {scale: 0, opacity: 0, delay: 0.2, duration: 0.5, ease: "bounce"});
+            .from("#chi-chi-say", {scale: 0, opacity: 0, transformOrigin:"right bottom", delay: 0.2, duration: 0.5, ease: "bounce"});
 
     // 導覽列
     $('.mobile-navi-btn').click(function() {
