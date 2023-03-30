@@ -147,7 +147,7 @@
     transition: 0.3s;
 }
 .store-hire-info:hover .store-hire-name {
-    color: #9AAFCF;
+    color: #fff;
 }
 .store-hire-info:hover .store-hire-name::before {
     background-color: #9AAFCF;

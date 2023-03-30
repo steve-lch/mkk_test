@@ -137,12 +137,12 @@
     z-index: 100;
     color: #fff;
     border-radius: 30px;
-    background-color: #2C579B;
-    box-shadow: 4px 4px 0 #9C9C9C;
+    background-color: #CC4E4E;
+    box-shadow: 4px 4px 0 #AF6060;
     transition: 0.3s;
 }
 .seminar-shortcut:hover {
-    background-color: #FFCC66;
+    background-color: #e59900;
 }
 .seminar-shortcut-set.fixed .seminar-shortcut {
     height: 36px;
@@ -340,18 +340,19 @@
 .join_class_form_item > label {
     color: #585858;
     font-size: 16px;
+    line-height: 40px;
     flex-shrink: 0;
     white-space: nowrap;
     margin: 0 10px 0 0;
 }
 .join_class_form_item > input {
-    height: 30px;
-    border-radius: 15px;
+    height: 40px;
+    border-radius: 10px;
     border: 1px solid #9AAFCF;
     background-color: rgba(154, 175, 207, 0.15);
     box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
     flex-grow: 1;
-    padding: 0 20px;
+    padding: 0 10px;
 }
 .join_class_form_check {
     display: flex;
@@ -364,8 +365,8 @@
 }
 .select-common_active.seminar-style {
     width: 100%;
-    height: 30px;
-    border-radius: 15px;
+    height: 40px;
+    border-radius: 10px;
     border: 1px solid #9AAFCF;
     background-color: rgba(154, 175, 207, 0.15);
     box-shadow: inset 0 0 8px rgba(0,0,0,0.15);
@@ -380,6 +381,7 @@
 }
 .join_class_form_check_item {
     margin: 0 20px 0 0;
+    height: 40px;
     display: flex;
     align-items: center;
     color: #2C579B;
@@ -560,7 +562,7 @@
 .gs-point-ico::before {
     display: block;
     content: '';
-    background-color: #FFCC66;
+    background-color: #ddd;
     width: calc(100% - 22px);
     height: calc(100% - 22px);
     position: absolute;
