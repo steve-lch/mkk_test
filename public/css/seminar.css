@@ -752,6 +752,22 @@
     margin: 0 0 30px 0;
 }
 
+/* 內頁樣式 */
+.article-page-sec {
+    display: flex;
+    justify-content: center;
+}
+.article-page-cnt {
+    padding: 40px 0;
+    min-height: calc(100vh - 403px);
+}
+.article-page-title {
+    font-size: 42px;
+    color: #132C53;
+    border-bottom: 1px solid #132C53;
+    margin: 0 0 16px 0;
+}
+
 /* Responsive */
 @media (max-width: 1219.98px) {
     .seminar-shortcut-set {
@@ -801,6 +817,9 @@
     }
     .how-choose {
         width: 100%;
+    }
+    .article-page-title {
+        font-size: 36px;
     }
 }
 @media (max-width: 697.98px) {
@@ -902,6 +921,9 @@
     .group-service-point::after {
         left: calc(50% - 6px);
     }
+    .article-page-title {
+        font-size: 28px;
+    }
 }
 @media (max-width: 421.98px) {
     .seminar-shortcut-set.fixed .seminar-shortcut {
@@ -912,6 +934,9 @@
     }
     .brand-advantage-point {
         width: 100%;
+    }
+    .article-page-title {
+        font-size: 24px;
     }
 }
 @media (max-width: 351.98px) {
