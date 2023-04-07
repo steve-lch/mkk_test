@@ -21,7 +21,8 @@
     <!-- Loading Animation End -->
 
     <!-- Header Start -->
-    <header class="header-sec hanging">
+    <header class="header-sec">
+    <!-- <header class="header-sec hanging"> -->
         
     </header>
     <!-- Header End -->
@@ -405,6 +406,7 @@
           let refOffset = 0;
           const headerHeight = 143;
           const headerWrapper = document.querySelector('.header-sec');
+          headerWrapper.classList.add('hanging');
 
           const handler = () => {
             const newOffset = window.scrollY || window.pageYOffset;
@@ -413,7 +415,6 @@
               if (newOffset > refOffset) {
                 headerWrapper.classList.remove('hanging');
               }
-                refOffset = newOffset;
               } else {
                 headerWrapper.classList.add('hanging');
               }
