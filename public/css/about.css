@@ -126,6 +126,13 @@
     position: relative;
     margin: 0 0 80px 0;
 }
+.mkk-cha-slider .swiper-container-flip .swiper-slide {
+    opacity: 0;
+}
+.mkk-cha-slider .swiper-container-flip .swiper-slide-active, 
+.mkk-cha-slider .swiper-container-flip .swiper-slide-active .swiper-slide-active {
+    opacity: 1;
+}
 .mkk-single-cha-story-wrapper {
     display: flex;
     position: relative;
