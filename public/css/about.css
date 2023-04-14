@@ -126,10 +126,10 @@
     position: relative;
     margin: 0 0 80px 0;
 }
-.mkk-cha-slider .mkk-single-cha-story-wrapper {
+.mkk-cha-slider .mkk-single-cha-story-wrapper > figure {
     opacity: 0;
 }
-.mkk-cha-slider .mkk-single-cha-story-wrapper.swiper-slide-active {
+.mkk-cha-slider .mkk-single-cha-story-wrapper.swiper-slide-active > figure {
     opacity: 1;
 }
 .mkk-single-cha-story-wrapper {
