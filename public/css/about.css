@@ -257,6 +257,9 @@
     .mkk-cha-intro-title::after {
         display: none;
     }
+    .good-ramen-sec {
+        background-position: 100% 50%;
+    }
 }
 @media (max-width: 775.98px) {
     .mkk-cha-comic {
@@ -275,6 +278,10 @@
 @media (max-width: 697.98px) {
     .theme-btn.shape-fixed {
         width: 40% !important;
+    }
+    .good-ramen-sec {
+        height: 600px;
+        background-position: 75% 50%;
     }
 }
 @media (max-width: 539.98px) {
