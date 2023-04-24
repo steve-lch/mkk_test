@@ -541,7 +541,8 @@ footer::after {
     content: '\f2e6';
 }
 .mobile-btm-tools.store-info > .mobile-btm-tools-ico::before {
-    content: '\f562';
+    /* content: '\f562'; */
+    content: '\f54f';
 }
 .mobile-btm-tools.news > .mobile-btm-tools-ico::before {
     content: '\f0a1';
