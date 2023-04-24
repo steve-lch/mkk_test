@@ -38,20 +38,20 @@
         <div class="swiper-wrapper">
             <!-- 1 banner item start -->
             <a class="swiper-slide main-banner-item" href="#" target="_blank">
-                <img class="desktop" src="img/sample_banner.jpg">
-                <img class="mobile" src="img/sample_banner_mb.jpg">
+                <img class="desktop" src="img/banner_01.jpg">
+                <img class="mobile" src="img/banner_01_m.jpg">
             </a>
             <!-- 1 banner item end -->
             <!-- 1 banner item start -->
             <a class="swiper-slide main-banner-item" href="#" target="_blank">
-              <img class="desktop" src="img/sample_banner.jpg">
-              <img class="mobile" src="img/sample_banner_mb.jpg">
+              <img class="desktop" src="img/banner_02.jpg">
+              <img class="mobile" src="img/banner_02_m.jpg">
             </a>
             <!-- 1 banner item end -->
             <!-- 1 banner item start -->
             <a class="swiper-slide main-banner-item" href="#" target="_blank">
-              <img class="desktop" src="img/sample_banner.jpg">
-              <img class="mobile" src="img/sample_banner_mb.jpg">
+              <img class="desktop" src="img/banner_03.jpg">
+              <img class="mobile" src="img/banner_03_m.jpg">
             </a>
             <!-- 1 banner item end -->
         </div>
@@ -300,8 +300,8 @@
         </div>
         <a class="theme-btn" href="#">全部活動</a>
       </div>
-      <div class="swiper-button-prev for-latest-news"></div>
-      <div class="swiper-button-next for-latest-news"></div>
+      <!-- <div class="swiper-button-prev for-latest-news"></div>
+      <div class="swiper-button-next for-latest-news"></div> -->
       <div class="news-wave-effect">
         <figure data-depth="0.4" class="wave-left"></figure>
         <figure data-depth="0.3" class="wave-right"></figure>
@@ -377,8 +377,8 @@
           <a class="theme-btn" href="#">我要加盟</a>
         </div>
       </div>
-      <div class="swiper-button-prev for-stories"></div>
-      <div class="swiper-button-next for-stories"></div>
+      <!-- <div class="swiper-button-prev for-stories"></div>
+      <div class="swiper-button-next for-stories"></div> -->
     </section>
     <!-- Stories End -->
 
@@ -426,11 +426,15 @@
         // Main banner 
         const mBanner = new Swiper('.swiper.main-banner-wrap', {
             initialSlide: 1,
+            effect: 'fade',
             pagination: {
                 el: '.swiper-pagination',
                 dynamicBullets: false,
             },
-
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: 0,
+            }
         });
 
         // 人氣推薦
@@ -455,6 +459,10 @@
               0: {
                 slidesPerView: 1
               }
+            },
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: 0,
             },
             navigation: {
               nextEl: ".swiper-button-next.for-recommendation",
@@ -486,9 +494,14 @@
               }
             },
             navigation: {
-              nextEl: ".swiper-button-next.for-latest-news",
-              prevEl: ".swiper-button-prev.for-latest-news",
+              enable: 0,
+              // nextEl: ".swiper-button-next.for-latest-news",
+              // prevEl: ".swiper-button-prev.for-latest-news",
             },
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: 0,
+            }
         });
 
         let waveEffect = document.querySelector('.news-wave-effect');
@@ -523,6 +536,10 @@
               nextEl: ".swiper-button-next.for-stories",
               prevEl: ".swiper-button-prev.for-stories",
             },
+            autoplay: {
+              delay: 2500,
+              disableOnInteraction: 0,
+            }
         });
     </script>
 </body>

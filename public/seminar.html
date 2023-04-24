@@ -238,7 +238,7 @@
           </figure>
           <figure class="how-choose">
             <h4 class="hc-itle">判斷一間店有沒有賺錢</h4>
-            <p class="hc-parag">知名度高就一定轉錢嗎？從商圈、定價、人流、業態等因素，完整精準剖析！</p>
+            <p class="hc-parag">知名度高就一定賺錢嗎？從商圈、定價、人流、業態等因素，完整精準剖析！</p>
           </figure>
           <figure class="how-choose">
             <h4 class="hc-itle">挑選適合自己的業態</h4>
@@ -646,8 +646,8 @@
           <a class="theme-btn" href="post.html">更多創業知識</a>
         </div>
       </div>
-      <div class="swiper-button-prev for-blog"></div>
-      <div class="swiper-button-next for-blog"></div>
+      <!-- <div class="swiper-button-prev for-blog"></div>
+      <div class="swiper-button-next for-blog"></div> -->
     </section>
     <!-- 創業知識部落格 End -->
 
@@ -718,8 +718,8 @@
           <a class="theme-btn" href="story.html">更多創業故事</a>
         </div>
       </div>
-      <div class="swiper-button-prev for-stories"></div>
-      <div class="swiper-button-next for-stories"></div>
+      <!-- <div class="swiper-button-prev for-stories"></div>
+      <div class="swiper-button-next for-stories"></div> -->
     </section>
     <!-- Stories End -->
 
@@ -805,6 +805,10 @@
               nextEl: ".swiper-button-next.for-blog",
               prevEl: ".swiper-button-prev.for-blog",
           },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: 0,
+          }
       });
 
       //創業故事
@@ -834,6 +838,10 @@
               nextEl: ".swiper-button-next.for-stories",
               prevEl: ".swiper-button-prev.for-stories",
           },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: 0,
+          }
       });
 
       $(function(){

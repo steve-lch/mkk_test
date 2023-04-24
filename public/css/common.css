@@ -731,6 +731,17 @@ input::-webkit-inner-spin-button {
     font-weight: 400;
     margin: 0 0 5px 0;
 }
+.swiper-button-next::after, .swiper-container-rtl .swiper-button-prev::after {
+    content: '\f04b';
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 900;
+}
+.swiper-button-prev::after, .swiper-container-rtl .swiper-button-next::after {
+    content: '\f04b';
+    font-family: 'Font Awesome 6 Pro';
+    font-weight: 900;
+    transform: rotate(180deg);
+}
 
 /* Firefox */
 input[type=number] {
@@ -890,11 +901,23 @@ input[type=number] {
     }
 }
 @media (max-width: 991.98px) {
+    .swiper-button-next, .swiper-button-prev {
+        color: #132C53;
+    }
     .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
-        display: none;
+        /* display: none; */
     }
     .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
-        display: none;
+        /* display: none; */
+    }
+    :root {
+        --swiper-navigation-size:16px;
+    }
+    .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        right: 4px;
+    }
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+        left: 4px;
     }
 }
 @media (max-width: 775.98px) {
